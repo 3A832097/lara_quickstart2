@@ -22,6 +22,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 //Route::get('/tasks', 'TaskController@index');
-Route::get('/tasks', \App\Http\Controllers\TaskController::class, 'index')->name('tasks.index');
+Route::get('/tasks', [\App\Http\Controllers\TaskController::class,'index'])->name('tasks.index');
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
