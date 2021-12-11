@@ -61,6 +61,17 @@
 
                             <td>
                                 <!-- 代辦：刪除按鈕 -->
+                        <tr>
+                            <!-- 刪除按鈕 -->
+                            <td>
+                                <form action="/task/{{ $task->id }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+
+                                    <button>刪除任務</button>
+                                </form>
+                            </td>
+                        </tr>
                             </td>
                         </tr>
                     @endforeach
